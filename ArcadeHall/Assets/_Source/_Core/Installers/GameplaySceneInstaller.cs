@@ -1,26 +1,37 @@
-using Core;
+using Player;
 using Session;
 using UnityEngine;
 using Zenject;
 
-public class GameplaySceneInstaller : MonoInstaller
+namespace Core
 {
-    public override void InstallBindings()
+    public class GameplaySceneInstaller : MonoInstaller
     {
-        InstallClasses();
-        InstallSignals();
-    }
+        [SerializeField] private PlayerInteractor playerInteractor;
 
-    private void InstallClasses()
-    {
-        Container.Bind<SessionManager>().AsSingle();
-    }
+        public override void InstallBindings()
+        {
+            InstallClasses();
+            InstallSignals();
+            InstallMonoClasses();
+        }
 
-    private void InstallSignals()
-    {
-        SignalBusInstaller.Install(Container);
+        private void InstallClasses()
+        {
+            Container.Bind<SessionManager>().AsSingle();
+        }
 
-        Container.DeclareSignal<TokensChangedSignal>();
-        Container.DeclareSignal<TicketsChangedSignal>();
+        private void InstallSignals()
+        {
+            SignalBusInstaller.Install(Container);
+
+            Container.DeclareSignal<TokensChangedSignal>();
+            Container.DeclareSignal<TicketsChangedSignal>();
+        }
+
+        private void InstallMonoClasses()
+        {
+            Container.Bind<PlayerInteractor>().FromInstance(playerInteractor).AsSingle();
+        }
     }
 }

@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 6387790296510282561}
   - component: {fileID: 106584729062755145}
   - component: {fileID: 7313154074591871423}
+  - component: {fileID: 3009004772681919544}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -225,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8556896815707163945}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.6087614, z: -0, w: 0.79335344}
+  m_LocalRotation: {x: 0, y: 0.60876137, z: 0, w: 0.7933534}
   m_LocalPosition: {x: -4.381, y: 0.884, z: 4.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -316,3 +317,20 @@ MonoBehaviour:
   sensitivity: 0.1
   minAnglY: -80
   maxAnglY: 80
+--- !u!114 &3009004772681919544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556896815707163945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7ce0cb558e051429e4704b6af023e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
+  view: {fileID: 4489272518738347485}
+  interactionDistance: 2.5
+  interactionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
