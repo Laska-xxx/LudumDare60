@@ -12,5 +12,6 @@ public class GameplaySceneInstaller : MonoInstaller
     private void InstallClasses()
     {
         Container.Bind<InputReader>().AsSingle();
+        Container.Bind<CursorController>().AsSingle();
     }
 }
