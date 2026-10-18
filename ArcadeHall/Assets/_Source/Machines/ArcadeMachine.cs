@@ -1,6 +1,7 @@
 using Core;
 using Interactable;
 using Player;
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using Zenject;
@@ -15,6 +16,8 @@ namespace Machines
         [SerializeField] private TicketsDispenser ticketDispenser;
         [SerializeField] private CinemachineCamera machineCamera;
         [SerializeField] private bool unlockCursor;
+
+        private CinemachineBrain _cinemachineBrain;
 
         public string HintText
         {
@@ -53,9 +56,8 @@ namespace Machines
                 return;
 
             IsPlaying = true;
-
             EnterMachine();
-            StartGame();
+            StartCoroutine(StartAfterCameraBlend());
         }
 
         protected abstract void StartGame();
@@ -85,6 +87,17 @@ namespace Machines
             machineCamera.gameObject.SetActive(false);
             InputReader.SwitchActionMapType(ActionMapType.Player);
             _cursorController.LockCursor();
+        }
+
+        private IEnumerator StartAfterCameraBlend()
+        {
+            if (_cinemachineBrain == null)
+                _cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
+
+            yield return null;
+            yield return new WaitUntil(() => !_cinemachineBrain.IsBlending);
+
+            StartGame();
         }
     }
 }
