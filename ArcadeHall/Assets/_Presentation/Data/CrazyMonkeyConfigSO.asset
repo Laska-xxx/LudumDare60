@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CrazyMonkeyConfigSO
   m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.CrazyMonkey.CrazyMonkeyConfigSO
   <GameDuration>k__BackingField: 10
-  <DrainSpeed>k__BackingField: 0.2
+  <DrainSpeed>k__BackingField: 0.25
   <ClickRestore>k__BackingField: 0.05
   <StartFill>k__BackingField: 0.5
   <MinTickets>k__BackingField: 1
