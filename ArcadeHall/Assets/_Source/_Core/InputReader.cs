@@ -17,6 +17,7 @@ namespace Core
         private void DisableAllActionMaps()
         {
             GameInput?.Player.Disable();
+            GameInput?.Minigame.Disable();
             GameInput?.UI.Disable();
         }
 
