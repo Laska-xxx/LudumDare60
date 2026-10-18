@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace UI
 {
-    public class OptionsPanel : MonoBehaviour
+    public class UIPanel : MonoBehaviour
     {
         [SerializeField] private GameObject optionsPanel;
         [SerializeField] private CanvasGroup ownerGroup;

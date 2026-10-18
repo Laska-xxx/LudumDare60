@@ -13,7 +13,7 @@ namespace UI
     {
         [SerializeField] private string menuSceneName = "MainMenu";
         [SerializeField] private GameObject pausePanel;
-        [SerializeField] private OptionsPanel optionsPanel;
+        [SerializeField] private UIPanel optionsPanel;
         [SerializeField] private TextMeshProUGUI bestScoreText;
         [SerializeField] private GameObject continueButtonObj;
 
