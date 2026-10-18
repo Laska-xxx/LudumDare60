@@ -115,7 +115,7 @@ namespace UI
                 return;
 
             if (optionsPanel.IsOpen)
-                optionsPanel.Close();
+                optionsPanel.Back();
             else
                 Resume();
         }

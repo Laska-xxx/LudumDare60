@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 0
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -5006,6 +5006,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4026644384297347843, guid: ce8264215d942584ca6cf9a374f94def, type: 3}
+--- !u!114 &1003516679 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6059810811337226665, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+  m_PrefabInstance: {fileID: 1730388722}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7fde25e6a098a45b4a687b0bf15bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.OptionsPanel
 --- !u!1 &1024694448
 GameObject:
   m_ObjectHideFlags: 0
@@ -6712,7 +6723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI.PauseMenuController
   menuSceneName: MainMenu
   pausePanel: {fileID: 1525965559}
-  optionsPanel: {fileID: 1730388724}
+  optionsPanel: {fileID: 1003516679}
   bestScoreText: {fileID: 809809762}
   continueButtonObj: {fileID: 1958338773}
   continueButton: {fileID: 1958338776}
@@ -7538,6 +7549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3225419155259542667, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3260379645736840881, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 231
@@ -7545,6 +7560,30 @@ PrefabInstance:
     - target: {fileID: 3260379645736840881, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842634944484710307, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5704806230868941285, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960948149375373589, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960948149375373589, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630621176249974785, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174530522068351359, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7556,17 +7595,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2334000815819669892, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
   m_PrefabInstance: {fileID: 1730388722}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1730388724 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -6349787892164742166, guid: 73217da44a29e404c88cf6370bc716a0, type: 3}
-  m_PrefabInstance: {fileID: 1730388722}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de7fde25e6a098a45b4a687b0bf15bdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI.OptionsPanel
 --- !u!1 &1767362593
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ namespace UI
         [SerializeField] private GameObject optionsPanel;
         [SerializeField] private CanvasGroup ownerGroup;
         [SerializeField] private GameObject firstSelected;
+        [SerializeField] private OptionRow[] rows;
 
         public bool IsOpen { get { return optionsPanel.activeSelf; } }
 
@@ -28,6 +29,17 @@ namespace UI
 
             optionsPanel.SetActive(true);
             EventSystem.current.SetSelectedGameObject(firstSelected);
+        }
+
+        public void Back()
+        {
+            foreach (OptionRow row in rows)
+            {
+                if (row.TryStopEditing())
+                    return;
+            }
+
+            Close();
         }
 
         public void Close()
