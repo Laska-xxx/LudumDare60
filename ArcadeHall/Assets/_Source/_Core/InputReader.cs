@@ -29,6 +29,9 @@ namespace Core
                 case ActionMapType.Player:
                     GameInput?.Player.Enable();
                     break;
+                case ActionMapType.Minigame:
+                    GameInput?.Minigame.Enable();
+                    break;
                 case ActionMapType.UI:
                     GameInput?.UI.Enable();
                     break;
@@ -48,6 +51,7 @@ namespace Core
     public enum ActionMapType
     {
         Player,
+        Minigame,
         UI
     }
 }

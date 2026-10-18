@@ -530,8 +530,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.6087614, z: 0, w: 0.79335344}
-  m_LocalPosition: {x: -4.381, y: 1.684, z: 4.56}
+  m_LocalRotation: {x: -0.2922682, y: -0.30604568, z: 0.099320665, w: -0.9005836}
+  m_LocalPosition: {x: 3.7001786, y: 2.893027, z: 10.96013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -605,7 +605,7 @@ MonoBehaviour:
     DefaultMode: 2
   DefaultBlend:
     Style: 1
-    Time: 2
+    Time: 1
     CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -1173,12 +1173,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582759304}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.29226822, y: -0.30604565, z: 0.09932066, w: -0.9005836}
-  m_LocalPosition: {x: 3.7001786, y: 2.8930273, z: 10.96013}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.22049728, y: -0.6656494, z: 0.21602367, w: -0.6794303}
+  m_LocalPosition: {x: -0.78985655, y: 1.8631614, z: 0.06297784}
+  m_LocalScale: {x: 0.6720539, y: 0.5844185, z: 0.5104949}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1966809511}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &601282826
 GameObject:
@@ -3708,7 +3708,7 @@ GameObject:
   - component: {fileID: 1966809513}
   - component: {fileID: 1966809512}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Fake Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3726,7 +3726,8 @@ Transform:
   m_LocalPosition: {x: 4.8771, y: 0.2179, z: 12.2787}
   m_LocalScale: {x: 2.2345, y: 1.4358, z: 1.4876624}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 582759306}
   m_Father: {fileID: 1097812048}
   m_LocalEulerAnglesHint: {x: 0, y: -51.287, z: 0}
 --- !u!114 &1966809512
@@ -3743,6 +3744,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FakeMinigame
   playHint: PLAY
   noTokensHint: NO TOKENS
+  machineCamera: {fileID: 582759305}
+  unlockCursor: 1
   duration: 2
   minTickets: 10
   maxTickets: 50
@@ -6443,4 +6446,3 @@ SceneRoots:
   - {fileID: 1097812048}
   - {fileID: 923254209}
   - {fileID: 1413709720}
-  - {fileID: 582759306}

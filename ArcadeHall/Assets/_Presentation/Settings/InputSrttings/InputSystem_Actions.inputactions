@@ -267,6 +267,56 @@
             ]
         },
         {
+            "name": "Minigame",
+            "id": "b4276ce2-c82e-42d6-94d0-32e261c1dc8a",
+            "actions": [
+                {
+                    "name": "Action",
+                    "type": "Button",
+                    "id": "e739ac5a-48ec-4921-8a05-4c6ac24133c9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4072ce7f-a74c-40f0-aaa0-7ef0f00ac6b3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a820b69d-ed78-42f8-9e07-6713f26df54f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "030743ef-8153-4bd3-be7d-93f6ccdfda3a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "UI",
             "id": "272f6d14-89ba-496f-b7ff-215263d3219f",
             "actions": [],
