@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477ea31d6bfe7f04e9b8a2d21c480180, type: 3}
+  m_Name: WheelConfigSO
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.Wheel.WheelConfigSO
+  <Sectors>k__BackingField:
+  - Tickets: 0
+    Weight: 65
+  - Tickets: 10
+    Weight: 17
+  - Tickets: 15
+    Weight: 10
+  - Tickets: 20
+    Weight: 5
+  - Tickets: 100
+    Weight: 2
+  - Tickets: 0
+    Weight: 65
+  - Tickets: 10
+    Weight: 17
+  - Tickets: 15
+    Weight: 10
+  <SpinDuration>k__BackingField: 4
+  <MinExtraRotations>k__BackingField: 2
+  <MaxExtraRotations>k__BackingField: 5
+  <SectorOffsetRange>k__BackingField: 0.35
+  <ResultDelay>k__BackingField: 1
