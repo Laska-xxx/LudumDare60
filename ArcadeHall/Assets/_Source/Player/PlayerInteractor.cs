@@ -16,6 +16,7 @@ namespace Player
         public event Action<string> OnInteractableFound;
         public event Action OnInteractableLost;
 
+        private string _currentHint;
         private InputReader _inputReader;
         private IInteractable _currentInteractable;
 
@@ -49,10 +50,11 @@ namespace Player
                 return;
             }
 
-            if (interactable != _currentInteractable)
+            if (interactable != _currentInteractable || interactable.HintText != _currentHint)
             {
                 _currentInteractable = interactable;
-                OnInteractableFound?.Invoke(_currentInteractable.HintText);
+                _currentHint = interactable.HintText;
+                OnInteractableFound?.Invoke(_currentHint);
             }
         }
 

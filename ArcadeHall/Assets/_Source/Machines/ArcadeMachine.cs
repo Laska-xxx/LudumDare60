@@ -11,10 +11,21 @@ namespace Machines
     {
         [SerializeField] private string playHint = "PLAY";
         [SerializeField] private string noTokensHint = "NO TOKENS";
+        [SerializeField] private string takeTicketsHint = "TAKE TICKETS";
+        [SerializeField] private TicketsDispenser ticketDispenser;
         [SerializeField] private CinemachineCamera machineCamera;
         [SerializeField] private bool unlockCursor;
 
-        public string HintText => _sessionManager.Tokens > 0 ? playHint : noTokensHint;
+        public string HintText
+        {
+            get
+            {
+                if (ticketDispenser.HasTickets)
+                    return takeTicketsHint;
+
+                return _sessionManager.Tokens > 0 ? playHint : noTokensHint;
+            }
+        }
 
         protected bool IsPlaying { get; private set; }
         protected InputReader InputReader;
@@ -35,13 +46,14 @@ namespace Machines
 
         public void Interact(PlayerInteractor player)
         {
-            if (IsPlaying)
+            if (IsPlaying || ticketDispenser.HasTickets)
                 return;
 
             if (!_sessionManager.TrySpendToken())
                 return;
 
             IsPlaying = true;
+
             EnterMachine();
             StartGame();
         }
@@ -51,8 +63,8 @@ namespace Machines
         protected void FinishGame(int tickets)
         {
             IsPlaying = false;
-            _sessionManager.AddTickets(tickets);
             ExitMachine();
+            ticketDispenser.Dispense(tickets);
         }
 
         private void EnterMachine()
