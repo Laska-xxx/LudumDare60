@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c2670ef44b4434d998b9021a559424, type: 3}
+  m_Name: CrazyMonkeyConfigSO
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.CrazyMonkey.CrazyMonkeyConfigSO
+  <GameDuration>k__BackingField: 10
+  <DrainSpeed>k__BackingField: 0.2
+  <ClickRestore>k__BackingField: 0.05
+  <StartFill>k__BackingField: 0.5
+  <MinTickets>k__BackingField: 1
+  <MaxTickets>k__BackingField: 20
+  <CountdownFrom>k__BackingField: 3
+  <CountdownStep>k__BackingField: 1
+  <GoDuration>k__BackingField: 0.5
+  <ResultDelay>k__BackingField: 1.5
