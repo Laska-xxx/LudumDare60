@@ -64,7 +64,11 @@ namespace Machines
         {
             IsPlaying = false;
             ExitMachine();
-            ticketDispenser.Dispense(tickets);
+
+            if (tickets > 0)
+                ticketDispenser.Dispense(tickets);
+            else
+                _sessionManager.CheckSessionEnd();
         }
 
         private void EnterMachine()

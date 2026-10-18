@@ -46,6 +46,7 @@ namespace Machines
                 return;
 
             _ticketsAmount = amount;
+            _sessionManager.RegisterRibbon();
             StartCoroutine(DispenseRoutine(Mathf.Min(amount, maxPhysicalTickets)));
         }
 
@@ -54,11 +55,12 @@ namespace Machines
             if (!HasTickets || IsPrinting)
                 return;
 
-            _sessionManager.AddTickets(_ticketsAmount);
-
             Destroy(_ribbon.gameObject);
             _ribbon = null;
             _heldTicket = null;
+
+            _sessionManager.CollectRibbon(_ticketsAmount);
+
             _ticketsAmount = 0;
         }
 

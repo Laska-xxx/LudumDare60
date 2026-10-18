@@ -27,6 +27,7 @@ namespace Core
 
             Container.DeclareSignal<TokensChangedSignal>();
             Container.DeclareSignal<TicketsChangedSignal>();
+            Container.DeclareSignal<SessionEndedSignal>();
         }
 
         private void InstallMonoClasses()
