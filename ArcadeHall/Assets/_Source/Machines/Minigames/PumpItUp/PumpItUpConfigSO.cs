@@ -52,6 +52,28 @@ namespace Machines.Minigames.PumpItUp
             return Mathf.RoundToInt(tickets);
         }
 
+        public Judgement GetJudgement(float offset)
+        {
+            if (offset <= PerfectWindow)
+                return Judgement.Perfect;
+
+            if (offset <= GreatWindow)
+                return Judgement.Great;
+
+            return offset <= GoodWindow ? Judgement.Good : Judgement.Miss;
+        }
+
+        public float GetWeight(Judgement judgement)
+        {
+            return judgement switch
+            {
+                Judgement.Perfect => 1f,
+                Judgement.Great => GreatWeight,
+                Judgement.Good => GoodWeight,
+                _ => 0f
+            };
+        }
+
         [ContextMenu("Log Chart")]
         private void LogChart()
         {

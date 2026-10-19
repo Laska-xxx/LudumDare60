@@ -16,7 +16,7 @@ MonoBehaviour:
   <Bpm>k__BackingField: 160
   <Offset>k__BackingField: 0
   <CountdownBars>k__BackingField: 2
-  <ApproachTime>k__BackingField: 1.2
+  <ApproachTime>k__BackingField: 1
   <Seed>k__BackingField: 0
   <Waves>k__BackingField:
   - <Name>k__BackingField: Warm up
@@ -35,32 +35,36 @@ MonoBehaviour:
     <NoteChance>k__BackingField: 0.7
     <ExtraNoteChances>k__BackingField:
     - 0.1
-  - <Name>k__BackingField: Break
-    <Bars>k__BackingField: 2
-    <NoteStep>k__BackingField: 2
-    <NoteChance>k__BackingField: 0.4
-    <ExtraNoteChances>k__BackingField: []
-  - <Name>k__BackingField: Rush
-    <Bars>k__BackingField: 2
+  - <Name>k__BackingField: Groove+
+    <Bars>k__BackingField: 8
     <NoteStep>k__BackingField: 1
-    <NoteChance>k__BackingField: 0.5
+    <NoteChance>k__BackingField: 0.85
     <ExtraNoteChances>k__BackingField:
     - 0.15
   - <Name>k__BackingField: Break
     <Bars>k__BackingField: 2
-    <NoteStep>k__BackingField: 1
-    <NoteChance>k__BackingField: 0.5
+    <NoteStep>k__BackingField: 2
+    <NoteChance>k__BackingField: 1
     <ExtraNoteChances>k__BackingField: []
-  - <Name>k__BackingField: Final
-    <Bars>k__BackingField: 7
+  - <Name>k__BackingField: Rush
+    <Bars>k__BackingField: 2
     <NoteStep>k__BackingField: 0.5
-    <NoteChance>k__BackingField: 0.65
-    <ExtraNoteChances>k__BackingField:
-    - 0.2
-    - 0.05
-  - <Name>k__BackingField: Outro
+    <NoteChance>k__BackingField: 0.35
+    <ExtraNoteChances>k__BackingField: []
+  - <Name>k__BackingField: Break
     <Bars>k__BackingField: 2
     <NoteStep>k__BackingField: 2
+    <NoteChance>k__BackingField: 1
+    <ExtraNoteChances>k__BackingField: []
+  - <Name>k__BackingField: Finel
+    <Bars>k__BackingField: 7
+    <NoteStep>k__BackingField: 1
+    <NoteChance>k__BackingField: 0.9
+    <ExtraNoteChances>k__BackingField:
+    - 0.25
+  - <Name>k__BackingField: Outro
+    <Bars>k__BackingField: 2
+    <NoteStep>k__BackingField: 4
     <NoteChance>k__BackingField: 1
     <ExtraNoteChances>k__BackingField: []
   <PerfectWindow>k__BackingField: 0.05
