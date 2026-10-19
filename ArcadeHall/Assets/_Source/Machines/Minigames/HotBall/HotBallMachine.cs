@@ -17,6 +17,9 @@ namespace Machines.Minigames.HotBall
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private TextMeshProUGUI ballsText;
 
+        [Header("Sounds")]
+        [SerializeField] private AudioClip holeSound;
+
         private int _score;
         private int _ballsLeft;
 
@@ -78,6 +81,9 @@ namespace Machines.Minigames.HotBall
 
         private void OnBallLanded(int points)
         {
+            if (points > 0)
+                PlaySound(holeSound);
+
             _score += points;
             UpdateScreen();
 

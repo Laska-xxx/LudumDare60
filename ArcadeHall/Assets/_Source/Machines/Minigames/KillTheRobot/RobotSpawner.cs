@@ -7,6 +7,10 @@ namespace Machines.Minigames.KillTheRobot
     {
         [SerializeField] private Robot[] robots;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip riseSound;
+
         private readonly List<Robot> _freeRobots = new();
 
         public bool AllHidden
@@ -38,6 +42,9 @@ namespace Machines.Minigames.KillTheRobot
                 robot.Show(wave.UpTime);
                 spawned++;
             }
+
+            if (spawned > 0 && audioSource != null && riseSound != null)
+                audioSource.PlayOneShot(riseSound);
 
             return spawned;
         }

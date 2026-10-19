@@ -68,6 +68,7 @@ namespace UI
             _wasCursorLocked = Cursor.lockState == CursorLockMode.Locked;
 
             Time.timeScale = 0f;
+            AudioListener.pause = true;
             _inputReader.SwitchActionMapType(ActionMapType.UI);
             _cursorController.UnlockCursor();
 
@@ -86,6 +87,7 @@ namespace UI
             pausePanel.SetActive(false);
 
             Time.timeScale = 1f;
+            AudioListener.pause = false;
             _inputReader.SwitchActionMapType(_previousMap);
 
             if (_wasCursorLocked)
@@ -100,6 +102,7 @@ namespace UI
         public void ExitToMenu()
         {
             Time.timeScale = 1f;
+            AudioListener.pause = false;
             _inputReader.SwitchActionMapType(ActionMapType.Player);
             SceneManager.LoadScene(menuSceneName);
         }

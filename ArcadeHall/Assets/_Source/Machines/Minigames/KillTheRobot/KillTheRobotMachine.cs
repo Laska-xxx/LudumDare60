@@ -18,6 +18,12 @@ namespace Machines.Minigames.KillTheRobot
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private string scoreFormat = "00";
 
+        [Header("Sounds")]
+        [SerializeField] private AudioClip startSound;
+        [SerializeField] private AudioClip hitSound;
+        [SerializeField] private AudioClip finishSound;
+        [SerializeField] private AudioSource musicSource;
+
         private int _spawned;
         private int _hits;
 
@@ -43,6 +49,7 @@ namespace Machines.Minigames.KillTheRobot
             waveText.text = string.Empty;
             UpdateScore();
             SetScreenVisible(true);
+            PlaySound(startSound);
 
             hammer.Begin();
             hammer.RobotHit += OnRobotHit;
@@ -54,6 +61,9 @@ namespace Machines.Minigames.KillTheRobot
         private IEnumerator GameRoutine()
         {
             yield return new WaitForSeconds(config.StartDelay);
+
+            if (musicSource != null)
+                musicSource.Play();
 
             foreach (RobotWave wave in config.Waves)
             {
@@ -84,6 +94,7 @@ namespace Machines.Minigames.KillTheRobot
         {
             _hits++;
             UpdateScore();
+            PlaySound(hitSound);
         }
 
         private void EndGame()
@@ -91,6 +102,11 @@ namespace Machines.Minigames.KillTheRobot
             hammer.RobotHit -= OnRobotHit;
             InputReader.GameInput.Minigame.Action.performed -= OnActionPressed;
             hammer.End();
+
+            if (musicSource != null)
+                musicSource.Stop();
+
+            PlaySound(finishSound);
 
             float accuracy = _spawned == 0 ? 0f : (float)_hits / _spawned;
             int tickets = config.GetTickets(accuracy);

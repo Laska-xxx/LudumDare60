@@ -12,6 +12,10 @@ namespace Machines
         [SerializeField] private int maxPhysicalTickets = 100;
         [SerializeField] private float bendLimit = 70f;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private AudioClip printSound;
+
         [Header("Hints")]
         [SerializeField] private string collectHint = "TAKE TICKETS";
         [SerializeField] private string printingHint = "PRINTING...";
@@ -75,6 +79,9 @@ namespace Machines
             {
                 Rigidbody ticket = Instantiate(ticketPrefab, startPoint.position, startPoint.rotation, _ribbon.transform);
                 ticket.isKinematic = true;
+
+                if (audioSource != null && printSound != null)
+                    audioSource.PlayOneShot(printSound);
 
                 if (_heldTicket != null)
                 {

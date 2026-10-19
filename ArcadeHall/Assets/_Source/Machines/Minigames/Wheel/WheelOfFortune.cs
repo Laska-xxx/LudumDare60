@@ -16,6 +16,13 @@ namespace Machines.Minigames.Wheel
         [SerializeField] private TMP_Text screenText;
         [SerializeField] private string idleText = "PRESS SPACE";
 
+        [Header("Sounds")]
+        [SerializeField] private AudioClip handleSound;
+        [SerializeField] private AudioSource spinSource;
+        [SerializeField] private AudioClip victorySound;
+        [SerializeField] private AudioClip lossSound;
+        [SerializeField] private int victoryMinTickets = 10;
+
         private Quaternion _baseRotation;
         private float _currentAngle;
         private bool _isSpinning;
@@ -54,6 +61,11 @@ namespace Machines.Minigames.Wheel
         {
             _isSpinning = true;
 
+            PlaySound(handleSound);
+
+            if (spinSource != null)
+                spinSource.Play();
+
             int sectorIndex = PickSector();
             float sectorAngle = 360f / config.Sectors.Length;
             float offset = Random.Range(-config.SectorOffsetRange, config.SectorOffsetRange) * sectorAngle;
@@ -74,6 +86,11 @@ namespace Machines.Minigames.Wheel
         {
             int tickets = config.Sectors[sectorIndex].Tickets;
             SetScreenText($"+{tickets}");
+
+            if (spinSource != null)
+                spinSource.Stop();
+
+            PlaySound(tickets >= victoryMinTickets ? victorySound : lossSound);
 
             DOVirtual.DelayedCall(config.ResultDelay, () =>
             {

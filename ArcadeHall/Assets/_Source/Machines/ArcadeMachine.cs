@@ -17,6 +17,9 @@ namespace Machines
         [SerializeField] private CinemachineCamera machineCamera;
         [SerializeField] private bool unlockCursor;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource sfxSource;
+
         private CinemachineBrain _cinemachineBrain;
 
         public string HintText
@@ -61,6 +64,12 @@ namespace Machines
         }
 
         protected abstract void StartGame();
+
+        protected void PlaySound(AudioClip clip)
+        {
+            if (clip != null && sfxSource != null)
+                sfxSource.PlayOneShot(clip);
+        }
 
         protected void FinishGame(int tickets)
         {

@@ -22,6 +22,11 @@ namespace Machines.Minigames.CrazyMonkey
         [SerializeField] private float gorillaWinAngle = 45f;
         [SerializeField] private float playerWinAngle = -45f;
 
+        [Header("Sounds")]
+        [SerializeField] private AudioClip startSound;
+        [SerializeField] private AudioClip gorillaSound;
+        [SerializeField] private AudioClip victorySound;
+
         private Quaternion _handsBaseRotation;
         private float _fill;
         private float _elapsed;
@@ -53,6 +58,7 @@ namespace Machines.Minigames.CrazyMonkey
             _elapsed = 0f;
             SetFill(config.StartFill);
             SetVisuals(showHand: true, showText: true, showSlider: false);
+            PlaySound(startSound);
 
             PlayCountdown();
         }
@@ -76,6 +82,7 @@ namespace Machines.Minigames.CrazyMonkey
         private void BeginWrestling()
         {
             SetVisuals(showHand: true, showText: false, showSlider: true);
+            PlaySound(gorillaSound);
 
             _isWrestling = true;
             InputReader.GameInput.Minigame.Action.performed += OnActionPressed;
@@ -108,6 +115,8 @@ namespace Machines.Minigames.CrazyMonkey
         {
             _isWrestling = false;
             InputReader.GameInput.Minigame.Action.performed -= OnActionPressed;
+
+            PlaySound(_fill >= 1f ? victorySound : gorillaSound);
 
             int tickets = Mathf.RoundToInt(Mathf.Lerp(config.MinTickets, config.MaxTickets, _fill));
 
