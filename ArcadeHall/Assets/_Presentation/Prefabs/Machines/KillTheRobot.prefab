@@ -162,15 +162,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700243073012180714}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.43045875, y: 0.560986, z: -0.43045872, w: 0.5609861}
-  m_LocalPosition: {x: 0.266, y: 0, z: 0}
+  m_LocalRotation: {x: 0.56098557, y: 0.43045938, z: -0.56098557, w: 0.43045938}
+  m_LocalPosition: {x: -0.266, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6798175653987981505}
   - {fileID: 5424259039139253825}
   m_Father: {fileID: 2740356035443135741}
-  m_LocalEulerAnglesHint: {x: 75, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 105, y: 90, z: 0}
 --- !u!65 &5802352937850803021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -516,6 +516,37 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4248920590892262269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3934852931859690642}
+  m_Layer: 0
+  m_Name: StartPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3934852931859690642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4248920590892262269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.151, y: 0.337, z: 0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1364118203669365821}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4466027643216310834
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8982009699656524148}
+  - component: {fileID: 5816905070835177631}
   m_Layer: 0
   m_Name: Robots
   m_TagString: Untagged
@@ -643,6 +675,25 @@ Transform:
   - {fileID: 5363196070327273333}
   m_Father: {fileID: 1364118203669365821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5816905070835177631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476987006240125041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94890a84da874048848612edc776f95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.KillTheRobot.RobotSpawner
+  robots:
+  - {fileID: 1030062913658383160}
+  - {fileID: 6386263270859193319}
+  - {fileID: 9002883781395549287}
+  - {fileID: 553256274650455876}
+  - {fileID: 4249982030094937692}
+  - {fileID: 3837540645131015554}
 --- !u!1 &4605927463898411283
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +840,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364118203669365821}
-  - component: {fileID: 4216441552745265324}
+  - component: {fileID: 7369882231939843910}
+  - component: {fileID: 7512155813735914557}
+  - component: {fileID: 3511928035917524091}
+  - component: {fileID: 5609359870490912940}
   m_Layer: 0
   m_Name: KillTheRobot
   m_TagString: Untagged
@@ -815,9 +869,52 @@ Transform:
   - {fileID: 6931838901359080057}
   - {fileID: 8982009699656524148}
   - {fileID: 1791962463310988320}
+  - {fileID: 3934852931859690642}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4216441552745265324
+--- !u!65 &7369882231939843910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278462438394672385}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.1951408, y: 1, z: 1.1833344}
+  m_Center: {x: -0.0023738146, y: 0, z: 0.00082206726}
+--- !u!65 &7512155813735914557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278462438394672385}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.2862253, z: 0.3058052}
+  m_Center: {x: 0, y: 0.64311266, z: -0.45965385}
+--- !u!114 &3511928035917524091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -826,19 +923,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 6278462438394672385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0412e65281c88a4a938a7159dc8161c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0037449d5af1693478e4eb278a095434, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.KillTheRobot.KillTheRobotTest
-  hammer: {fileID: 3937602470119843771}
-  robots:
-  - {fileID: 1030062913658383160}
-  - {fileID: 6386263270859193319}
-  - {fileID: 9002883781395549287}
-  - {fileID: 553256274650455876}
-  - {fileID: 4249982030094937692}
-  - {fileID: 3837540645131015554}
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.KillTheRobot.KillTheRobotMachine
+  playHint: PLAY
+  noTokensHint: NO TOKENS
+  takeTicketsHint: TAKE TICKETS
+  ticketDispenser: {fileID: 5609359870490912940}
   machineCamera: {fileID: 5453780556352528611}
-  upTime: 1.5
+  unlockCursor: 1
+  config: {fileID: 11400000, guid: cd5e21c0702600b4fae8918f7847bce3, type: 2}
+  hammer: {fileID: 3937602470119843771}
+  robotSpawner: {fileID: 5816905070835177631}
+  waveText: {fileID: 5052257924669991092}
+  scoreText: {fileID: 7457215256922639342}
+  scoreFormat: 00
+--- !u!114 &5609359870490912940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278462438394672385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed9ce28be52d81449b9fea7726be775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.TicketsDispenser
+  ticketPrefab: {fileID: 5304625832926293195, guid: 81885a242830db047a4c4031822ff37b, type: 3}
+  startPoint: {fileID: 3934852931859690642}
+  feedSpeed: 0.7
+  maxPhysicalTickets: 100
+  bendLimit: 70
+  collectHint: TAKE TICKETS
+  printingHint: PRINTING...
 --- !u!1 &6384268350628475665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,14 +1170,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9100451832976545239}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.845, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.432, y: 0.413, z: 0.409}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8651396269372900308}
   m_Father: {fileID: 1364118203669365821}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &3937602470119843771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,6 +1190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc18426e2467d4409a37a779abce1a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.KillTheRobot.Hammer
+  workLocalPosition: {x: 0, y: 0.845, z: 0}
+  workLocalRotation: {x: 0, y: 0, z: 0}
+  pickUpDuration: 0.4
   hammerHandler: {fileID: 8651396269372900308}
   hitAngleX: 0
   swingDownDuration: 0.07

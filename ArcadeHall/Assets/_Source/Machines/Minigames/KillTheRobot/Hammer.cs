@@ -7,6 +7,11 @@ namespace Machines.Minigames.KillTheRobot
 {
     public class Hammer : MonoBehaviour
     {
+        [Header("Work Pose")]
+        [SerializeField] private Vector3 workLocalPosition = new(0f, 0.845f, 0f);
+        [SerializeField] private Vector3 workLocalRotation = Vector3.zero;
+        [SerializeField] private float pickUpDuration = 0.4f;
+
         [Header("Swing")]
         [SerializeField] private Transform hammerHandler;
         [SerializeField] private float hitAngleX = 0f;
@@ -20,7 +25,9 @@ namespace Machines.Minigames.KillTheRobot
 
         private Camera _camera;
         private Plane _plane;
-        private Vector3 _startPosition;
+        private Vector3 _restPosition;
+        private Quaternion _restRotation;
+        private Quaternion _workRotation;
         private Quaternion _handlerBaseRotation;
         private Quaternion _handlerHitRotation;
         private bool _isActive;
@@ -28,8 +35,12 @@ namespace Machines.Minigames.KillTheRobot
 
         private void Awake()
         {
-            _startPosition = transform.position;
-            _plane = new Plane(Vector3.up, transform.position);
+            _restPosition = transform.localPosition;
+            _restRotation = transform.localRotation;
+            _workRotation = Quaternion.Euler(workLocalRotation);
+
+            Vector3 workWorldPosition = transform.parent.TransformPoint(workLocalPosition);
+            _plane = new Plane(Vector3.up, workWorldPosition);
 
             _handlerBaseRotation = hammerHandler.localRotation;
             Vector3 euler = hammerHandler.localEulerAngles;
@@ -44,7 +55,13 @@ namespace Machines.Minigames.KillTheRobot
         public void Begin()
         {
             _camera = Camera.main;
-            _isActive = true;
+            DOTween.Kill(this);
+
+            DOTween.Sequence()
+                .Append(transform.DOLocalMove(workLocalPosition, pickUpDuration).SetEase(Ease.OutQuad))
+                .Join(transform.DOLocalRotateQuaternion(_workRotation, pickUpDuration).SetEase(Ease.OutQuad))
+                .OnComplete(() => _isActive = true)
+                .SetId(this);
         }
 
         public void End()
@@ -54,12 +71,16 @@ namespace Machines.Minigames.KillTheRobot
             DOTween.Kill(this);
 
             hammerHandler.localRotation = _handlerBaseRotation;
-            transform.position = _startPosition;
+
+            DOTween.Sequence()
+                .Append(transform.DOLocalMove(_restPosition, pickUpDuration).SetEase(Ease.InOutQuad))
+                .Join(transform.DOLocalRotateQuaternion(_restRotation, pickUpDuration).SetEase(Ease.InOutQuad))
+                .SetId(this);
         }
 
         private void Update()
         {
-            if (!_isActive)
+            if (!_isActive || Time.timeScale == 0f)
                 return;
 
             Ray ray = GetMouseRay();
