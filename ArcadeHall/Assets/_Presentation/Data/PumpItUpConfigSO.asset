@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ef7d61d93d32144882f9b44b4f4fb3, type: 3}
+  m_Name: PumpItUpConfigSO
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.PumpItUp.PumpItUpConfigSO
+  <Music>k__BackingField: {fileID: 8300000, guid: 2c3809a67c4fe8c4c9ceadd98dac4666, type: 3}
+  <Bpm>k__BackingField: 160
+  <Offset>k__BackingField: 0
+  <CountdownBars>k__BackingField: 2
+  <ApproachTime>k__BackingField: 1.2
+  <Seed>k__BackingField: 0
+  <Waves>k__BackingField:
+  - <Name>k__BackingField: Warm up
+    <Bars>k__BackingField: 7
+    <NoteStep>k__BackingField: 1
+    <NoteChance>k__BackingField: 0.5
+    <ExtraNoteChances>k__BackingField: []
+  - <Name>k__BackingField: Break
+    <Bars>k__BackingField: 2
+    <NoteStep>k__BackingField: 2
+    <NoteChance>k__BackingField: 0.6
+    <ExtraNoteChances>k__BackingField: []
+  - <Name>k__BackingField: Groove
+    <Bars>k__BackingField: 15
+    <NoteStep>k__BackingField: 1
+    <NoteChance>k__BackingField: 0.7
+    <ExtraNoteChances>k__BackingField:
+    - 0.1
+  - <Name>k__BackingField: Break
+    <Bars>k__BackingField: 2
+    <NoteStep>k__BackingField: 2
+    <NoteChance>k__BackingField: 0.4
+    <ExtraNoteChances>k__BackingField: []
+  - <Name>k__BackingField: Rush
+    <Bars>k__BackingField: 2
+    <NoteStep>k__BackingField: 1
+    <NoteChance>k__BackingField: 0.5
+    <ExtraNoteChances>k__BackingField:
+    - 0.15
+  - <Name>k__BackingField: Break
+    <Bars>k__BackingField: 2
+    <NoteStep>k__BackingField: 1
+    <NoteChance>k__BackingField: 0.5
+    <ExtraNoteChances>k__BackingField: []
+  - <Name>k__BackingField: Final
+    <Bars>k__BackingField: 7
+    <NoteStep>k__BackingField: 0.5
+    <NoteChance>k__BackingField: 0.65
+    <ExtraNoteChances>k__BackingField:
+    - 0.2
+    - 0.05
+  - <Name>k__BackingField: Outro
+    <Bars>k__BackingField: 2
+    <NoteStep>k__BackingField: 2
+    <NoteChance>k__BackingField: 1
+    <ExtraNoteChances>k__BackingField: []
+  <PerfectWindow>k__BackingField: 0.05
+  <GreatWindow>k__BackingField: 0.1
+  <GoodWindow>k__BackingField: 0.15
+  <GreatWeight>k__BackingField: 0.7
+  <GoodWeight>k__BackingField: 0.4
+  <JudgementShowTime>k__BackingField: 0.4
+  <GoodAccuracy>k__BackingField: 0.7
+  <GoodTickets>k__BackingField: 20
+  <PerfectAccuracy>k__BackingField: 0.95
+  <PerfectTickets>k__BackingField: 50
+  <ResultDelay>k__BackingField: 1.5
