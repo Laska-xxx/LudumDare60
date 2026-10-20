@@ -110,6 +110,7 @@ MonoBehaviour:
   bendLimit: 70
   audioSource: {fileID: 7754239453245306961}
   printSound: {fileID: 8300000, guid: a000877efd39615428a38872ede70a41, type: 3}
+  takeSound: {fileID: 8300000, guid: 3d4b70a780b64d61b5b2b5d59ddaa1f2, type: 3}
   collectHint: TAKE TICKETS
   printingHint: PRINTING...
 --- !u!1 &1012891238231218750

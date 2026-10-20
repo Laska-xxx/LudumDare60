@@ -16,6 +16,11 @@ namespace Player
         [Header("Ground Check")]
         [SerializeField] private float groundCheckDistance = 0.1f;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource stepsSource;
+        [SerializeField] private AudioSource jumpSource;
+        [SerializeField] private float stepsMinSpeed = 0.5f;
+
         private InputReader _inputReader;
         private Rigidbody _rb;
         private CapsuleCollider _capsule;
@@ -69,12 +74,32 @@ namespace Player
             velocity.x = horizontal.x;
             velocity.z = horizontal.z;
 
-            if (_jumpRequested && IsGrounded())
+            bool isGrounded = IsGrounded();
+
+            if (_jumpRequested && isGrounded)
+            {
                 velocity.y = Mathf.Sqrt(2f * jumpHeight * -Physics.gravity.y);
+                isGrounded = false;
+
+                if (jumpSource != null)
+                    jumpSource.Play();
+            }
 
             _jumpRequested = false;
 
             _rb.linearVelocity = velocity;
+            UpdateSteps(isGrounded && horizontal.magnitude > stepsMinSpeed);
+        }
+
+        private void UpdateSteps(bool isWalking)
+        {
+            if (stepsSource == null || stepsSource.isPlaying == isWalking)
+                return;
+
+            if (isWalking)
+                stepsSource.Play();
+            else
+                stepsSource.Stop();
         }
 
         private void OnJump(InputAction.CallbackContext context)

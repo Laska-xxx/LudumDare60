@@ -21,6 +21,7 @@ namespace Machines.Minigames.KillTheRobot
         [Header("Sounds")]
         [SerializeField] private AudioClip startSound;
         [SerializeField] private AudioClip hitSound;
+        [SerializeField] private AudioClip robotDeadSound;
         [SerializeField] private AudioClip finishSound;
         [SerializeField] private AudioSource musicSource;
 
@@ -95,6 +96,7 @@ namespace Machines.Minigames.KillTheRobot
             _hits++;
             UpdateScore();
             PlaySound(hitSound);
+            PlaySound(robotDeadSound);
         }
 
         private void EndGame()

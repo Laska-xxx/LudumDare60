@@ -20,6 +20,9 @@ public class PumpItUpMachine : ArcadeMachine
     [SerializeField] private string readyText = "READY?";
     [SerializeField] private string goText = "GO!";
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip endSound;
+
     private ScoreCounter _score;
     private bool _isRunning;
 
@@ -112,6 +115,7 @@ public class PumpItUpMachine : ArcadeMachine
 
         int tickets = config.GetTickets(_score.Accuracy);
         countdownText.text = $"+{tickets}";
+        PlaySound(endSound);
 
         DOVirtual.DelayedCall(config.ResultDelay, () =>
         {
@@ -123,7 +127,7 @@ public class PumpItUpMachine : ArcadeMachine
             screenCamera.enabled = false;
 
             FinishGame(tickets);
-        })
+        }, false)
             .SetId(this);
     }
 }

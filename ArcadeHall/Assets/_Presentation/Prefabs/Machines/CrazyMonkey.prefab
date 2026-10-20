@@ -837,6 +837,13 @@ MonoBehaviour:
   startSound: {fileID: 8300000, guid: f223b92918bc6f24c9d9c38030955fd5, type: 3}
   gorillaSound: {fileID: 8300000, guid: 86c5f9d3c90b76a4b86e402a2c13bfab, type: 3}
   victorySound: {fileID: 8300000, guid: 67715b16c8d9234488a62aa63b1764ba, type: 3}
+  chestBeatSound: {fileID: 8300000, guid: f4435a85b4384552bc116c468a128bfe, type: 3}
+  gorillaWinSound: {fileID: 8300000, guid: 7c8067c1edc44fde8516bab833d7fdaa, type: 3}
+  playerScreams:
+  - {fileID: 8300000, guid: 4365c09069224a69b89b6b7641d894e0, type: 3}
+  - {fileID: 8300000, guid: 9d534f113e6245c7b1eea4fd58eea8c1, type: 3}
+  screamChance: 0.2
+  screamCooldown: 1
 --- !u!65 &3216126472360164056
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -877,6 +884,7 @@ MonoBehaviour:
   bendLimit: 70
   audioSource: {fileID: 8459082761638057918}
   printSound: {fileID: 8300000, guid: a000877efd39615428a38872ede70a41, type: 3}
+  takeSound: {fileID: 8300000, guid: 3d4b70a780b64d61b5b2b5d59ddaa1f2, type: 3}
   collectHint: TAKE TICKETS
   printingHint: PRINTING...
 --- !u!1 &1967660208152998607
@@ -1884,7 +1892,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 8
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

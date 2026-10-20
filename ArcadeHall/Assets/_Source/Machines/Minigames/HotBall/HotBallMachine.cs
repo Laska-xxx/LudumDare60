@@ -19,6 +19,7 @@ namespace Machines.Minigames.HotBall
 
         [Header("Sounds")]
         [SerializeField] private AudioClip holeSound;
+        [SerializeField] private AudioClip winSound;
 
         private int _score;
         private int _ballsLeft;
@@ -100,6 +101,9 @@ namespace Machines.Minigames.HotBall
 
             int tickets = config.GetTickets(_score);
             ballsText.text = $"+{tickets}";
+
+            if (tickets > 0)
+                PlaySound(winSound);
 
             DOVirtual.DelayedCall(config.ResultDelay, () =>
             {

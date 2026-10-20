@@ -54,7 +54,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 8
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -2164,6 +2164,7 @@ MonoBehaviour:
   scoreText: {fileID: 6489134846597960361}
   ballsText: {fileID: 6578589993331116771}
   holeSound: {fileID: 8300000, guid: f7663c9443b9a634d80bdfab05bc1000, type: 3}
+  winSound: {fileID: 8300000, guid: 7d2fd5950b934226ab5ecffd00632fe4, type: 3}
 --- !u!114 &2993521679621655879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,6 +2184,7 @@ MonoBehaviour:
   bendLimit: 70
   audioSource: {fileID: 4305607367650315280}
   printSound: {fileID: 8300000, guid: a000877efd39615428a38872ede70a41, type: 3}
+  takeSound: {fileID: 8300000, guid: 3d4b70a780b64d61b5b2b5d59ddaa1f2, type: 3}
   collectHint: TAKE TICKETS
   printingHint: PRINTING...
 --- !u!114 &6090951126925089926

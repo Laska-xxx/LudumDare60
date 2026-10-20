@@ -26,11 +26,17 @@ namespace Machines.Minigames.CrazyMonkey
         [SerializeField] private AudioClip startSound;
         [SerializeField] private AudioClip gorillaSound;
         [SerializeField] private AudioClip victorySound;
+        [SerializeField] private AudioClip chestBeatSound;
+        [SerializeField] private AudioClip gorillaWinSound;
+        [SerializeField] private AudioClip[] playerScreams;
+        [SerializeField] private float screamChance = 0.2f;
+        [SerializeField] private float screamCooldown = 1f;
 
         private Quaternion _handsBaseRotation;
         private float _fill;
         private float _elapsed;
         private bool _isWrestling;
+        private float _nextScreamTime;
         private string _currentScreenText;
 
         private void Start()
@@ -83,7 +89,9 @@ namespace Machines.Minigames.CrazyMonkey
         {
             SetVisuals(showHand: true, showText: false, showSlider: true);
             PlaySound(gorillaSound);
+            PlaySound(chestBeatSound);
 
+            _nextScreamTime = 0f;
             _isWrestling = true;
             InputReader.GameInput.Minigame.Action.performed += OnActionPressed;
         }
@@ -106,6 +114,7 @@ namespace Machines.Minigames.CrazyMonkey
                 return;
 
             SetFill(_fill + config.ClickRestore);
+            TryScream();
 
             if (_fill >= 1f)
                 EndWrestling();
@@ -116,7 +125,7 @@ namespace Machines.Minigames.CrazyMonkey
             _isWrestling = false;
             InputReader.GameInput.Minigame.Action.performed -= OnActionPressed;
 
-            PlaySound(_fill >= 1f ? victorySound : gorillaSound);
+            PlaySound(_fill >= 1f ? victorySound : gorillaWinSound);
 
             int tickets = Mathf.RoundToInt(Mathf.Lerp(config.MinTickets, config.MaxTickets, _fill));
 
@@ -130,6 +139,18 @@ namespace Machines.Minigames.CrazyMonkey
                 FinishGame(tickets);
             }, false)
                 .SetId(this);
+        }
+
+        private void TryScream()
+        {
+            if (playerScreams == null || playerScreams.Length == 0)
+                return;
+
+            if (_elapsed < _nextScreamTime || Random.value > screamChance)
+                return;
+
+            _nextScreamTime = _elapsed + screamCooldown;
+            PlaySound(playerScreams[Random.Range(0, playerScreams.Length)]);
         }
 
         private void SetFill(float value)

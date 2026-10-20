@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1502594472736921783}
   - component: {fileID: 3144701787202066364}
-  - component: {fileID: 8135329575198848814}
   - component: {fileID: 6815710867818193525}
   m_Layer: 0
   m_Name: 'PumpItUpLeft '
@@ -52,7 +51,7 @@ MonoBehaviour:
   ticketDispenser: {fileID: 3265129848232104700}
   machineCamera: {fileID: 7112139179894438637}
   unlockCursor: 0
-  sfxSource: {fileID: 0}
+  sfxSource: {fileID: 9195465952369899366}
   config: {fileID: 11400000, guid: 871b75df927e2bf4fb84d36c8da216fa, type: 2}
   board: {fileID: 7742742525506027388}
   hitter: {fileID: 6291595932558860063}
@@ -63,27 +62,7 @@ MonoBehaviour:
   progressSlider: {fileID: 276119770505118528}
   readyText: READY?
   goText: GO!
---- !u!114 &8135329575198848814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320448620474250720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed9ce28be52d81449b9fea7726be775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Machines.TicketsDispenser
-  ticketPrefab: {fileID: 5304625832926293195, guid: 81885a242830db047a4c4031822ff37b, type: 3}
-  startPoint: {fileID: 1502594472736921783}
-  feedSpeed: 0.7
-  maxPhysicalTickets: 100
-  bendLimit: 70
-  audioSource: {fileID: 0}
-  printSound: {fileID: 0}
-  collectHint: TAKE TICKETS
-  printingHint: PRINTING...
+  endSound: {fileID: 8300000, guid: fd851aa59ba14ba6acfc7898c1033091, type: 3}
 --- !u!65 &6815710867818193525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -220,6 +199,135 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &836316256767838098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8368197792192814478}
+  - component: {fileID: 9195465952369899366}
+  m_Layer: 0
+  m_Name: MachineSFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8368197792192814478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836316256767838098}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.14429, y: 1.51322, z: -1.2867494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4234957139497300113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &9195465952369899366
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836316256767838098}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 1668145975859780429, guid: 7145562c131eeda4fab9895cd95414e0, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1427324445628872917
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +380,7 @@ MonoBehaviour:
   ticketDispenser: {fileID: 3265129848232104700}
   machineCamera: {fileID: 987085729013209067}
   unlockCursor: 0
-  sfxSource: {fileID: 0}
+  sfxSource: {fileID: 9195465952369899366}
   config: {fileID: 11400000, guid: 871b75df927e2bf4fb84d36c8da216fa, type: 2}
   board: {fileID: 7742742525506027388}
   hitter: {fileID: 6291595932558860063}
@@ -283,6 +391,7 @@ MonoBehaviour:
   progressSlider: {fileID: 276119770505118528}
   readyText: READY?
   goText: GO!
+  endSound: {fileID: 8300000, guid: fd851aa59ba14ba6acfc7898c1033091, type: 3}
 --- !u!114 &3265129848232104700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +411,7 @@ MonoBehaviour:
   bendLimit: 70
   audioSource: {fileID: 0}
   printSound: {fileID: 0}
+  takeSound: {fileID: 0}
   collectHint: TAKE TICKETS
   printingHint: PRINTING...
 --- !u!65 &1815311449930749888
@@ -512,6 +622,135 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!1 &3312303725658248445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2602947089023169345}
+  - component: {fileID: 3670011006541968076}
+  m_Layer: 0
+  m_Name: HumOfMachineSFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2602947089023169345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312303725658248445}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.14429, y: 1.51322, z: -1.2867494}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4234957139497300113}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3670011006541968076
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312303725658248445}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 1668145975859780429, guid: 7145562c131eeda4fab9895cd95414e0, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c395c993b5d3d8340abf73a27674129f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 8
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6874756527573759795
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4234957139497300113}
+  - component: {fileID: 5029208185709582884}
   m_Layer: 0
   m_Name: PumpItUp
   m_TagString: Untagged
@@ -624,8 +864,32 @@ Transform:
   - {fileID: 5533083911791932484}
   - {fileID: 3563100281695720676}
   - {fileID: 2891977947143381221}
+  - {fileID: 8368197792192814478}
+  - {fileID: 2602947089023169345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5029208185709582884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7835288472556889878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed9ce28be52d81449b9fea7726be775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Machines.TicketsDispenser
+  ticketPrefab: {fileID: 5304625832926293195, guid: 81885a242830db047a4c4031822ff37b, type: 3}
+  startPoint: {fileID: 1502594472736921783}
+  feedSpeed: 0.7
+  maxPhysicalTickets: 100
+  bendLimit: 70
+  audioSource: {fileID: 9195465952369899366}
+  printSound: {fileID: 8300000, guid: a000877efd39615428a38872ede70a41, type: 3}
+  takeSound: {fileID: 8300000, guid: 3d4b70a780b64d61b5b2b5d59ddaa1f2, type: 3}
+  collectHint: TAKE TICKETS
+  printingHint: PRINTING...
 --- !u!1 &8448519778486892967
 GameObject:
   m_ObjectHideFlags: 0

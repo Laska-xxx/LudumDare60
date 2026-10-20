@@ -15,6 +15,7 @@ namespace Machines
         [Header("Audio")]
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioClip printSound;
+        [SerializeField] private AudioClip takeSound;
 
         [Header("Hints")]
         [SerializeField] private string collectHint = "TAKE TICKETS";
@@ -62,6 +63,9 @@ namespace Machines
             Destroy(_ribbon.gameObject);
             _ribbon = null;
             _heldTicket = null;
+
+            if (audioSource != null && takeSound != null)
+                audioSource.PlayOneShot(takeSound);
 
             _sessionManager.CollectRibbon(_ticketsAmount);
 
