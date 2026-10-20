@@ -48,7 +48,7 @@ MonoBehaviour:
   playHint: PLAY
   noTokensHint: NO TOKENS
   takeTicketsHint: TAKE TICKETS
-  ticketDispenser: {fileID: 3265129848232104700}
+  ticketDispenser: {fileID: 5029208185709582884}
   machineCamera: {fileID: 7112139179894438637}
   unlockCursor: 0
   sfxSource: {fileID: 9195465952369899366}
@@ -338,7 +338,6 @@ GameObject:
   m_Component:
   - component: {fileID: 877393802563234809}
   - component: {fileID: 3297536568781182836}
-  - component: {fileID: 3265129848232104700}
   - component: {fileID: 1815311449930749888}
   m_Layer: 0
   m_Name: PumpItUpRight
@@ -377,7 +376,7 @@ MonoBehaviour:
   playHint: PLAY
   noTokensHint: NO TOKENS
   takeTicketsHint: TAKE TICKETS
-  ticketDispenser: {fileID: 3265129848232104700}
+  ticketDispenser: {fileID: 5029208185709582884}
   machineCamera: {fileID: 987085729013209067}
   unlockCursor: 0
   sfxSource: {fileID: 9195465952369899366}
@@ -392,28 +391,6 @@ MonoBehaviour:
   readyText: READY?
   goText: GO!
   endSound: {fileID: 8300000, guid: fd851aa59ba14ba6acfc7898c1033091, type: 3}
---- !u!114 &3265129848232104700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427324445628872917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ed9ce28be52d81449b9fea7726be775, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Machines.TicketsDispenser
-  ticketPrefab: {fileID: 5304625832926293195, guid: 81885a242830db047a4c4031822ff37b, type: 3}
-  startPoint: {fileID: 1502594472736921783}
-  feedSpeed: 0.7
-  maxPhysicalTickets: 100
-  bendLimit: 70
-  audioSource: {fileID: 0}
-  printSound: {fileID: 0}
-  takeSound: {fileID: 0}
-  collectHint: TAKE TICKETS
-  printingHint: PRINTING...
 --- !u!65 &1815311449930749888
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -881,7 +858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Machines.TicketsDispenser
   ticketPrefab: {fileID: 5304625832926293195, guid: 81885a242830db047a4c4031822ff37b, type: 3}
-  startPoint: {fileID: 1502594472736921783}
+  startPoint: {fileID: 8084169354442152099}
   feedSpeed: 0.7
   maxPhysicalTickets: 100
   bendLimit: 70
@@ -1027,14 +1004,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8952573062026600717}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071066, z: -0, w: 0.70710707}
-  m_LocalPosition: {x: -0.675, y: 0.9336, z: 0.0161}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.579, y: 0.9336, z: 0.016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3158986821275428511}
   m_Father: {fileID: 4234957139497300113}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &9158073967808160355
 GameObject:
   m_ObjectHideFlags: 0

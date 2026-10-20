@@ -1509,8 +1509,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00078043825, y: 0.97417665, z: -0.2257515, w: 0.0039459392}
-  m_LocalPosition: {x: -0.87986755, y: 2.195754, z: -5.955261}
+  m_LocalRotation: {x: 0.05667914, y: -0.014503476, z: 0.00088140025, w: 0.9982867}
+  m_LocalPosition: {x: -3.2506893, y: 1.1622188, z: 3.2370338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11118,6 +11118,9 @@ MonoBehaviour:
   bestScoreText: {fileID: 128604671}
   firstSelected: {fileID: 123274748}
   showDelay: 1
+  menuSceneName: MainMenu
+  restartButton: {fileID: 123274750}
+  exitButton: {fileID: 2035203032}
 --- !u!1 &2035203030
 GameObject:
   m_ObjectHideFlags: 0

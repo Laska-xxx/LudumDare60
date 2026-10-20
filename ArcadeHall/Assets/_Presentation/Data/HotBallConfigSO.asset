@@ -20,6 +20,6 @@ MonoBehaviour:
   <MinLaunchSpeed>k__BackingField: 4
   <MaxLaunchSpeed>k__BackingField: 10
   <MaxRollTime>k__BackingField: 6
-  <PointsPerTicket>k__BackingField: 5000
+  <PointsPerTicket>k__BackingField: 1000
   <MaxTickets>k__BackingField: 20
   <ResultDelay>k__BackingField: 1.5

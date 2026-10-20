@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Zenject;
 
 namespace UI
@@ -16,6 +17,11 @@ namespace UI
         [SerializeField] private TextMeshProUGUI bestScoreText;
         [SerializeField] private GameObject firstSelected;
         [SerializeField] private float showDelay = 1f;
+        [SerializeField] private string menuSceneName = "MainMenu";
+
+        [Header("Buttons")]
+        [SerializeField] private Button restartButton;
+        [SerializeField] private Button exitButton;
 
         private SignalBus _signalBus;
         private InputReader _inputReader;
@@ -32,6 +38,9 @@ namespace UI
         private void Awake()
         {
             resultsPanel.SetActive(false);
+
+            restartButton.onClick.AddListener(Restart);
+            exitButton.onClick.AddListener(ExitToMenu);
         }
 
         private void OnEnable()
@@ -49,6 +58,12 @@ namespace UI
         {
             _inputReader.SwitchActionMapType(ActionMapType.Player);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void ExitToMenu()
+        {
+            _inputReader.SwitchActionMapType(ActionMapType.Player);
+            SceneManager.LoadScene(menuSceneName);
         }
 
         private void OnSessionEnded(SessionEndedSignal signal)
