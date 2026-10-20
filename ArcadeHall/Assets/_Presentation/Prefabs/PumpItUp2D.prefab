@@ -229,8 +229,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294901920
-  m_fontColor: {r: 0.62744606, g: 0, b: 1, a: 1}
+    rgba: 4287046088
+  m_fontColor: {r: 0.78431374, g: 0.12941177, b: 0.5294118, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Perfect
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50932ef546ec2d54091e5ae107d56018, type: 2}
   m_sharedMaterial: {fileID: -7312710261299621461, guid: 50932ef546ec2d54091e5ae107d56018, type: 2}

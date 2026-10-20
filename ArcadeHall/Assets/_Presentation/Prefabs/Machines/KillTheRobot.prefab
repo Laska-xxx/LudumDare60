@@ -1052,6 +1052,7 @@ MonoBehaviour:
   machineCamera: {fileID: 5453780556352528611}
   unlockCursor: 1
   sfxSource: {fileID: 6127042566691797995}
+  muteBackgroundMusic: 1
   config: {fileID: 11400000, guid: cd5e21c0702600b4fae8918f7847bce3, type: 2}
   hammer: {fileID: 3937602470119843771}
   robotSpawner: {fileID: 5816905070835177631}

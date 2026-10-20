@@ -1,3 +1,4 @@
+using Audio;
 using Core;
 using Interactable;
 using Player;
@@ -19,6 +20,7 @@ namespace Machines
 
         [Header("Audio")]
         [SerializeField] private AudioSource sfxSource;
+        [SerializeField] private bool muteBackgroundMusic;
 
         private CinemachineBrain _cinemachineBrain;
 
@@ -87,6 +89,9 @@ namespace Machines
             machineCamera.gameObject.SetActive(true);
             InputReader.SwitchActionMapType(ActionMapType.Minigame);
 
+            if (muteBackgroundMusic)
+                BackgroundMusic.SetMuted(true);
+
             if (unlockCursor)
                 _cursorController.UnlockCursor();
         }
@@ -95,6 +100,9 @@ namespace Machines
         {
             machineCamera.gameObject.SetActive(false);
             InputReader.SwitchActionMapType(ActionMapType.Player);
+
+            if (muteBackgroundMusic)
+                BackgroundMusic.SetMuted(false);
             _cursorController.LockCursor();
         }
 

@@ -52,6 +52,7 @@ MonoBehaviour:
   machineCamera: {fileID: 7112139179894438637}
   unlockCursor: 0
   sfxSource: {fileID: 9195465952369899366}
+  muteBackgroundMusic: 1
   config: {fileID: 11400000, guid: 871b75df927e2bf4fb84d36c8da216fa, type: 2}
   board: {fileID: 7742742525506027388}
   hitter: {fileID: 6291595932558860063}
@@ -380,6 +381,7 @@ MonoBehaviour:
   machineCamera: {fileID: 987085729013209067}
   unlockCursor: 0
   sfxSource: {fileID: 9195465952369899366}
+  muteBackgroundMusic: 1
   config: {fileID: 11400000, guid: 871b75df927e2bf4fb84d36c8da216fa, type: 2}
   board: {fileID: 7742742525506027388}
   hitter: {fileID: 6291595932558860063}

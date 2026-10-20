@@ -1,3 +1,4 @@
+using Audio;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -46,6 +47,7 @@ namespace UI
         private void OnValueChanged(float value)
         {
             Redraw();
+            UISounds.PlaySlider(Slider.normalizedValue);
         }
     }
 }
