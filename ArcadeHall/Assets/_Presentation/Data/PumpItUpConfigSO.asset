@@ -73,8 +73,8 @@ MonoBehaviour:
   <GreatWeight>k__BackingField: 0.7
   <GoodWeight>k__BackingField: 0.4
   <JudgementShowTime>k__BackingField: 0.4
-  <GoodAccuracy>k__BackingField: 0.7
+  <GoodAccuracy>k__BackingField: 0.9
   <GoodTickets>k__BackingField: 20
-  <PerfectAccuracy>k__BackingField: 0.95
+  <PerfectAccuracy>k__BackingField: 0.96
   <PerfectTickets>k__BackingField: 50
   <ResultDelay>k__BackingField: 1.5

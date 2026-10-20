@@ -58,7 +58,7 @@ MonoBehaviour:
   clock: {fileID: 628711379730085852}
   screenCamera: {fileID: 4282253473943107806}
   judgementView: {fileID: 1068224765414022638}
-  countdownText: {fileID: 5291435071761379552}
+  countdownText: {fileID: 172346239905984009}
   progressSlider: {fileID: 276119770505118528}
   readyText: READY?
   goText: GO!
@@ -386,7 +386,7 @@ MonoBehaviour:
   clock: {fileID: 628711379730085852}
   screenCamera: {fileID: 4282253473943107806}
   judgementView: {fileID: 1068224765414022638}
-  countdownText: {fileID: 5291435071761379552}
+  countdownText: {fileID: 172346239905984009}
   progressSlider: {fileID: 276119770505118528}
   readyText: READY?
   goText: GO!
@@ -1522,6 +1522,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cdd76c0ee55b124390d8167946c6324, type: 3}
+--- !u!114 &172346239905984009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3146224276929925798, guid: 3cdd76c0ee55b124390d8167946c6324, type: 3}
+  m_PrefabInstance: {fileID: 3012320678874856623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!114 &276119770505118528 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3033474264076238831, guid: 3cdd76c0ee55b124390d8167946c6324, type: 3}
@@ -1560,17 +1571,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 1342203986868536433, guid: 3cdd76c0ee55b124390d8167946c6324, type: 3}
   m_PrefabInstance: {fileID: 3012320678874856623}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5291435071761379552 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6963442000696134735, guid: 3cdd76c0ee55b124390d8167946c6324, type: 3}
-  m_PrefabInstance: {fileID: 3012320678874856623}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!4 &5533083911791932484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7279117935357937899, guid: 3cdd76c0ee55b124390d8167946c6324, type: 3}
