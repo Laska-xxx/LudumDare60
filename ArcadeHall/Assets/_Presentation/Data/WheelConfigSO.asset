@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: WheelConfigSO
   m_EditorClassIdentifier: Assembly-CSharp::Machines.Minigames.Wheel.WheelConfigSO
   <Sectors>k__BackingField:
-  - Tickets: 0
-    Weight: 65
   - Tickets: 10
     Weight: 17
-  - Tickets: 15
-    Weight: 10
+  - Tickets: 0
+    Weight: 65
   - Tickets: 20
     Weight: 5
+  - Tickets: 15
+    Weight: 10
   - Tickets: 100
     Weight: 2
   - Tickets: 0

@@ -87,7 +87,7 @@ namespace Machines.Minigames.HotBall
             _score += points;
             UpdateScreen();
 
-            DOVirtual.DelayedCall(config.NextBallDelay, PrepareBall).SetId(this);
+            DOVirtual.DelayedCall(config.NextBallDelay, PrepareBall, false).SetId(this);
         }
 
         private void EndGame()
@@ -105,7 +105,7 @@ namespace Machines.Minigames.HotBall
             {
                 SetScreenVisible(false);
                 FinishGame(tickets);
-            })
+            }, false)
                 .SetId(this);
         }
 

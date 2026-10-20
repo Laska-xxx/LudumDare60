@@ -97,7 +97,7 @@ namespace Machines.Minigames.Wheel
                 _isSpinning = false;
                 SetScreenText(idleText);
                 FinishGame(tickets);
-            })
+            }, false)
                 .SetId(this);
         }
 

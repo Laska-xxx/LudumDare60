@@ -128,7 +128,7 @@ namespace Machines.Minigames.CrazyMonkey
                 SetVisuals(showHand: false, showText: false, showSlider: false);
                 SetFill(config.StartFill);
                 FinishGame(tickets);
-            })
+            }, false)
                 .SetId(this);
         }
 

@@ -117,7 +117,7 @@ namespace Machines.Minigames.KillTheRobot
             {
                 SetScreenVisible(false);
                 FinishGame(tickets);
-            })
+            }, false)
                 .SetId(this);
         }
 

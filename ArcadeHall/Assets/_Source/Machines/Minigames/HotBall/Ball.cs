@@ -44,7 +44,7 @@ namespace Machines.Minigames.HotBall
             body.AddForce(velocity, ForceMode.VelocityChange);
             _isRolling = true;
 
-            DOVirtual.DelayedCall(maxRollTime, () => Land(0)).SetId(this);
+            DOVirtual.DelayedCall(maxRollTime, () => Land(0), false).SetId(this);
         }
 
         private void OnTriggerEnter(Collider other)
