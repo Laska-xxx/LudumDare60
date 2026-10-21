@@ -2067,8 +2067,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Game Designers------\n  -Mikhail Shilov\n  -Kazakbaeva Ksenia\nGame developer------\n 
-    -Elena Zubvichus\n2D artists----------\n  -Dasha\n  -Rina\n3D artists----------\n 
-    -Alexander Yugay\n  -Mark Bliner\n  -Anton Korolkov"
+    -Elena Zubvichus\n2D artists----------\n  -Darya Anosova\n  -Rina Zyulkova\n3D
+    artists----------\n  -Alexander Yugay\n  -Mark Bliner\n  -Anton Korolkov"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50932ef546ec2d54091e5ae107d56018, type: 2}
   m_sharedMaterial: {fileID: -7312710261299621461, guid: 50932ef546ec2d54091e5ae107d56018, type: 2}
