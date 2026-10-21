@@ -6889,6 +6889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrazyMonkey (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3125001173362306784, guid: 303d2e9c304cfaf41866712a9fc6b672, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4564847954190986879, guid: 303d2e9c304cfaf41866712a9fc6b672, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -15346,6 +15350,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 79f015865c8d3d140a8dc44d7b9825e7, type: 2}
+    - target: {fileID: 1435011748134220805, guid: 9111cf8467ccc1642b16701e476ffdca, type: 3}
+      propertyPath: m_Height
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4109395051599528197, guid: 9111cf8467ccc1642b16701e476ffdca, type: 3}
       propertyPath: Priority.Enabled
       value: 0
@@ -15353,6 +15361,14 @@ PrefabInstance:
     - target: {fileID: 4109395051599528197, guid: 9111cf8467ccc1642b16701e476ffdca, type: 3}
       propertyPath: Priority.m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489272518738347485, guid: 9111cf8467ccc1642b16701e476ffdca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535349829223460049, guid: 9111cf8467ccc1642b16701e476ffdca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6484971209971723750, guid: 9111cf8467ccc1642b16701e476ffdca, type: 3}
       propertyPath: m_LocalPosition.x
